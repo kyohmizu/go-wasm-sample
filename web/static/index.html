@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+
+  </head>
+  <body>
+      <table id="calculator">
+        <thead>
+          <tr>
+            <th id="result" class="calc-result" colspan="4">0</th>
+          </tr>  
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3"><button onClick="reset()" class="reset-button">C</button></td>
+            <td><button onClick="operate('/')" class="op-button">÷</button></td>
+          </tr>
+          <tr>
+            <td><button onClick="inputNum('7')" class="num-button">7</button></td>
+            <td><button onClick="inputNum('8')" class="num-button">8</button></td>
+            <td><button onClick="inputNum('9')" class="num-button">9</button></td>
+            <td><button onClick="operate('*')" class="op-button">×</button></td>
+          </tr>
+          <tr>
+            <td><button onClick="inputNum('4')" class="num-button">4</button></td>
+            <td><button onClick="inputNum('5')" class="num-button">5</button></td>
+            <td><button onClick="inputNum('6')" class="num-button">6</button></td>
+            <td><button onClick="operate('-')" class="op-button">-</button></td>
+          </tr>
+          <tr>
+            <td><button onClick="inputNum('1')" class="num-button">1</button></td>
+            <td><button onClick="inputNum('2')" class="num-button">2</button></td>
+            <td><button onClick="inputNum('3')" class="num-button">3</button></td>
+            <td><button onClick="operate('+')" class="op-button">+</button></td>
+          </tr>
+          <tr>
+            <td><button onClick="reverseSign()" class="reverse-button">+/-</button></td>
+            <td colspan="2"><button onClick="inputNum('0')" class="num-button">0</button></td>
+            <td><button onClick="operate('=')" class="op-button">=</button></td>
+          </tr>
+        </tbody>
+      </table>
+  </body>
+</html>

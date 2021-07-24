@@ -1,0 +1,5 @@
+*.wasm
+.vscode/*
+server
+!server/
+!server/server.go

@@ -1,0 +1,87 @@
+#calculator{    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 20px;
+    margin: auto;
+}
+
+.calc-result{
+    font-size: 50px;
+}
+
+button{
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+.op-button{
+    color: white;
+    background: #e68505; 
+  }
+
+.op-button:active{
+    padding-top:6px;
+    padding-bottom:4px;
+    background-color: #a86507;
+    color: white;
+    -webkit-box-shadow:inset 0px 0px 8px #334c66;
+    -moz-box-shadow:inset 0px 0px 2px #3a6da0;
+    box-shadow:inset 0px 0px 2px #3a6da0;
+}
+
+.num-button{
+    color: white;
+    background: rgb(73, 73, 73);
+  }
+  
+.num-button:active{
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background: rgb(130, 134, 138);
+    color: white;
+    -webkit-box-shadow:inset 0px 0px 8px #334c66;
+    -moz-box-shadow:inset 0px 0px 2px #3a6da0;
+    box-shadow:inset 0px 0px 2px #3a6da0;
+}
+
+.reverse-button{
+    font-size: 38px;
+    color:white;
+    background: rgb(73, 73, 73);
+  }
+  
+.reverse-button:active{
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background: rgb(130, 134, 138);
+    color: white;
+    -webkit-box-shadow:inset 0px 0px 8px #334c66;
+    -moz-box-shadow:inset 0px 0px 2px #3a6da0;
+    box-shadow:inset 0px 0px 2px #3a6da0;
+}
+
+.reset-button{
+    color: white;
+    background: rgb(44, 43, 43);
+  }
+
+.reset-button:active{
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background: rgb(85, 83, 83);
+    color: white;
+    -webkit-box-shadow:inset 0px 0px 8px #334c66;
+    -moz-box-shadow:inset 0px 0px 2px #3a6da0;
+    box-shadow:inset 0px 0px 2px #3a6da0;
+}
